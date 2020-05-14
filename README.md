@@ -28,7 +28,7 @@ git push m_DL localmaster
 ## How to pull from Ece's master branch 
 First add repo into your environment. This is a one time action.
 ```
-git add ece_DL https://github.com/easilar/DLHiggsClassification.git
+git remote add ece_DL https://github.com/easilar/DLHiggsClassification.git
 ```
 Now pull the changes
 ```
