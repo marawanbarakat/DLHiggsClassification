@@ -15,10 +15,23 @@ When uploading a new file, first save the file in the right directory in your lo
 For example, if you are uploading a jupiter notebook save it in the jupiter notebook folder. 
 Then follow the recipe below.
 
+## How to add a new file
+
 ```
 git add <path of you file>
+```
+## How to push your changes
+```
 git commit -am "new jupiter notebook"
 git push m_DL localmaster
 ```  
-
-
+## How to pull from Ece's master branch 
+First add repo into your environment. This is a one time action.
+```
+git remote add ece_DL https://github.com/easilar/DLHiggsClassification.git
+```
+Now pull the changes
+```
+git pull ece_DL master
+git commit -am "merge from ece's repository"
+```
