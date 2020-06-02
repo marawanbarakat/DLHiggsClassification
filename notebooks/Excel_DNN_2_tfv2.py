@@ -6,7 +6,7 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
+import numpy as np 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
@@ -15,19 +15,15 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras import layers, optimizers, regularizers
 from tensorflow.keras.layers import Flatten , Activation
 from tensorflow.keras.layers import Dense
-<<<<<<< HEAD
-
-=======
 #from keras.wrappers.scikit_learn import KerasClassifier
->>>>>>> 60b7b70464128a3633c73491272f71c6dff5f0a1
 import time
 from tensorflow.keras.callbacks import TensorBoard
 
 NAME ="Excel model-{}".format(int(time.time()))
 
 tensorboard=TensorBoard(log_dir='logs/{}'.format(NAME))
-
-
+    
+                               
 
 df =pd.read_csv('../data/training.csv')
 
@@ -53,27 +49,22 @@ model = Sequential()
 model.add(Flatten())
 
 model.add(Dense(1000))
-<<<<<<< HEAD
-model.add(Activation('relu'))
-
-=======
 model.add(Activation('relu')) 
 '''
->>>>>>> 60b7b70464128a3633c73491272f71c6dff5f0a1
 model.add(Dense(1000))
-model.add(Activation('relu'))
+model.add(Activation('relu')) 
 
 model.add(Dense(1000))
-model.add(Activation('relu'))
+model.add(Activation('relu')) 
 
 model.add(Dense(1000))
-model.add(Activation('relu'))
+model.add(Activation('relu')) 
 
 #model.add(Dense(500))
-#model.add(Activation('relu'))
+#model.add(Activation('relu')) 
 
 #model.add(Dense(500))
-#model.add(Activation("relu"))
+#model.add(Activation("relu")) 
 
 #model.add(Dense(500))
 #model.add(Activation("relu"))
@@ -83,18 +74,13 @@ model.add(Activation('relu'))
 
 #model.add(Dense(100))
 #model.add(Activation("relu"))
-
-
+          
+          
 #model.add(Dense(10))
-<<<<<<< HEAD
-#model.add(Activation('relu'))
-
-=======
 #model.add(Activation('relu'))          
 '''          
->>>>>>> 60b7b70464128a3633c73491272f71c6dff5f0a1
 
-# Add an output layer
+# Add an output layer 
 model.add(Dense(2))
 model.add(Activation('sigmoid'))
 
@@ -112,11 +98,11 @@ model.fit(X_train,y_train, epochs=10 ,batch_size=32)
 
 
 
-
-
+          
+          
 val_loss, val_acc = model.evaluate(X_test, y_test) # evaluate the out of sample data with model
 print("test loss=",val_loss) #model's loss
-print("test acc =",val_acc)  #model's accuracy
+print("test acc =",val_acc)  #model's accuracy   
 
 
 y_pred=model.predict(X_test)
@@ -127,13 +113,13 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred) #confusion matrix is not working with continious probability values
 print(cm)
 
-sensitivity=cm[0,0]/(cm[0,0]+cm[1,0])
-specificity=cm[1,1]/(cm[1,0]+cm[1,1])
+sensitivity=cm[0,0]/(cm[0,0]+cm[1,0]) 
+specificity=cm[1,1]/(cm[1,0]+cm[1,1]) 
 print("sesnsetivity =",sensitivity)
 print( "specificity =",specificity)
 
 
-
+    
 
 
 # In[ ]:
